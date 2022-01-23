@@ -21,11 +21,16 @@ function appendCat(){
 }
 
 function prependCat(){
-    const prependCat = [cats.unshift(), "Arnold"];
+    const prependCat = ["Arnold", ...cats];
     return prependCat;
 }
 
-function removeLastCat(){
-    const removeLastCat = [...removeLastCat.slice(2)];
-    return removeLastCat
+function removeLastCat(name){
+    const removeLastCat = cats.slice(0, -1);
+    return removeLastCat;
+}
+
+function removeFirstCat(name) {
+    const removeFirstCat = cats.slice(-1, 0);
+    return removeFirstCat;
 }
